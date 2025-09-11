@@ -1,0 +1,353 @@
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 80px;
+    padding-left: 96px;
+    padding-right: 24px ;
+    height: 10000px;
+}
+
+
+body{
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+.thumbnail{
+    width: 100%;
+    
+}
+
+
+
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+.video-title{
+    margin-top: 0;
+   font-size: 14px;
+   font-weight: 700;
+   line-height: 20px;
+   margin-bottom: 12px;
+}
+
+.video-stats,.video-creator{
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+
+}
+
+.video-creator{
+    margin-bottom: 4px;
+}
+
+
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.channel-pic{
+
+    width: 50;
+    vertical-align: top;
+}
+
+.video-info{
+   
+    width: 200px;
+
+}
+
+.profile-pic{
+    width:40px;
+    border-radius: 50%;
+}
+
+
+
+
+.thumbnail-row{
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.video-time{
+    position: absolute;
+    background-color: black;
+    color:white;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px;
+}
+
+
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+
+
+
+
+/* making the header */
+/* makes the header display flexible and makes the divs allign :horizontal */
+.header{
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+
+/*     evenly distributes the content on the top bar */
+justify-content: space-between;
+
+/* Makes header stay in placed even whilst scrolling */
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+/* Adds background-color to the header  */
+background-color: white;
+/* adds border to the bottom */
+
+border-bottom: 1px solid rgb(194, 191, 191);
+z-index: 1 ;
+
+}
+
+
+.left-section{
+   /*  turns section into a flexbox */
+    display: flex;
+    flex-direction: row;
+   /*  centers youtube logo and hamburger menu */
+    align-items: center;
+   /*  spaces out youtube logo and hamburger menu  */
+    justify-content: space-between;
+  
+ 
+}
+
+.middle-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+/*     makes the search bar able to resize itself based on the size of the browser window */
+    flex: 1;
+/*     spaces out the search bar from the rest of the sections */
+margin-right: 35px;
+margin-left: 70px;
+/* sets a maximum size on the search bar */
+max-width: 500px;
+    
+}
+
+
+.search-bar{
+    flex:1;
+    height:37px; 
+    padding-left: 10px;
+    font-size: 16px;
+    border-style: solid ;
+    border-width: 1px ;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, .015);
+    /* allows search bar to shrink all the way  */
+    width: 0;
+}
+
+.search-button{
+    height: 40.5px;
+    width: 60px;
+    border: 1px solid rgb(192, 192, 192);
+    margin-left: -1px;
+    margin-right: 8px;
+
+    
+   
+    
+}
+
+.search-button,.voice-search-button,.upload-icon-conatiner,.youtube-apps-icon-container,.notifications-counter-conatiner{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;}
+
+.search-icon{
+    height: 25px;
+    margin-top: 4px;
+}
+
+.search-button .tooltip, .voice-search-button .tooltip, .upload-icon-conatiner .tooltip,.youtube-apps-icon-container .tooltip,.notifications-counter-conatiner .tooltip{
+    position: absolute;
+    background-color: grey;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px ;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: .75rem;
+    bottom: -30px;
+ /*    makes it so it is not visible and adds transition*/
+    opacity: 0;
+    transition: opacity .3s;
+    /* makes it so you cannot se the tool tip when hovering over the tooltip only the button */
+    pointer-events: none;
+/*     prevents text that is to long from wrapping */
+    white-space: nowrap;
+}
+/*  makes it so the tool tip will only appear whilst hovering over the search button*/
+.search-button:hover .tooltip, .voice-search-button:hover .tooltip, .upload-icon-conatiner:hover .tooltip, .youtube-apps-icon-container:hover .tooltip, .notifications-counter-conatiner:hover .tooltip{
+    opacity: 1;
+}
+
+
+/* changes place holder inside of the search bar */
+.search-bar::placeholder{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    padding-left: 12px;
+
+}
+
+.voice-search-button{
+    height: 40px;
+    width:40px;
+    border: none;
+    border-radius: 50%;
+   
+
+}
+
+.voice-image{
+ height: 25px;
+}
+
+.right-section{
+   display: flex;
+   align-items: center;
+    width: 200px;
+    justify-content: space-evenly;
+    margin-right: 24px ;
+    /* prevents right section from shrinking */
+  
+}
+
+
+/* fixes shapes of icon and spaces them out  */
+.hamburger-menu{
+    height:25px;
+    margin-left:20px;
+    margin-right: 25px;
+}
+
+
+.youtube-logo{
+height: 25px;
+
+}
+
+
+
+.upload-icon{
+    height: 24px;
+
+}
+
+
+.youtube-apps-icon{
+    height: 24px;
+}
+
+.notifications-counter-conatiner{
+    position: relative;
+}
+.notifications-counter{
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background-color: red;
+    font-size: .75rem;
+    color: white;
+     justify-content: center;
+    border-radius: 50%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  
+   
+   
+}
+
+.notifications-icon{
+    height: 24px;
+}
+
+
+.current-user-picture{
+    height: 32px;
+    border-radius: 50%;
+}
+
+
+.sidebar{
+/*     makes sidebar fixed */
+position: fixed;
+/* spaces out the sidebar correctly */
+top: 55px;
+bottom:0;
+left: 0;
+background-color: white;
+width: 72px;
+z-index: 200;
+
+}
+
+
+/* adds boxes for sidebar links */
+
+.sidebar-link{
+    height: 76px;
+    display: flex;
+/*     horziontally aligns items */
+align-items: center;
+/*   vertically aligns items  */
+justify-content: center;
+/* justify content and align-items function are switched after flex-direction = columns */
+flex-direction: column;
+cursor: pointer;
+}
+
+.sidebar-link:hover{
+    background-color: rgb(218, 217, 217);
+}
+
+
+
+/* targets all images inside of a sidebarlink */
+.sidebar-link img{
+    height: 24px; 
+}
+
+.sidebar-link div{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 10px;
+    margin-top: 5px;
+   
+}
